@@ -1,7 +1,5 @@
 INSERT INTO apps(name, path, release, init, web, title, created, updated) VALUES
-('conta','conta','','conta.php','','BANK-ZERO Contabilidad en la nube', EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-03 17:47:19'),EXTRACT('EPOCH' FROM TIMESTAMP'2022-05-03 17:47:19')),
-('AutServer','AutServer','','admincp.php','','AutServer',EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-03 13:00:09'), EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-03 13:00:09')),
-('appadmin','appadmin','','appadmin.php','','BANK-ZERO Administración de aplicaciones',EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-06 19:21:53'), EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-06 19:21:53'));
+('conta','conta','','conta.php','','BANK-ZERO Contabilidad en la nube', EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-03 17:47:19'),EXTRACT('EPOCH' FROM TIMESTAMP'2022-05-03 17:47:19'));
 
 INSERT INTO companies(name, created, updated) VALUES
 ('BiblioData', EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-07 17:39:05'), EXTRACT('EPOCH' FROM TIMESTAMP '2022-05-07 17:39:05')),

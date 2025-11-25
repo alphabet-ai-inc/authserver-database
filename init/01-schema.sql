@@ -31,7 +31,7 @@ CREATE TABLE public.apps (
     created integer NOT NULL DEFAULT 0,
     updated integer NOT NULL DEFAULT 0,
     description text DEFAULT '',
-    positioning_stmt character varying(255) DEFAULT '',
+    positioning_stmt text DEFAULT '',
     logo character varying(255) DEFAULT '',
     category character varying(255) DEFAULT '',
     platform text[] DEFAULT '{}',
@@ -47,12 +47,12 @@ CREATE TABLE public.apps (
     revenue_streams text[] DEFAULT '{}',
     customer_segments text[] DEFAULT '{}',
     channels text[] DEFAULT '{}',
-    value_proposition character varying(255) DEFAULT '',
+    value_proposition text DEFAULT '',
     pricing_tiers text[] DEFAULT '{}',
     partnerships text[] DEFAULT '{}',
     cost_structure text[] DEFAULT '{}',
     customer_relationships text[] DEFAULT '{}',
-    unfair_advantage character varying(255) DEFAULT '',
+    unfair_advantage text DEFAULT '',
     roadmap character varying(255) DEFAULT '',
     version_control character varying(255) DEFAULT '',
     error_rate integer DEFAULT 0,
@@ -70,11 +70,11 @@ CREATE TABLE public.apps (
     accessibility_features text[] DEFAULT '{}',
     team_structure text[] DEFAULT '{}',
     data_backup_location character varying(255) DEFAULT '',
-    environmental_impact character varying(255) DEFAULT '',
-    social_impact character varying(255) DEFAULT '',
+    environmental_impact text DEFAULT '',
+    social_impact text DEFAULT '',
     intellectual_property text[] DEFAULT '{}',
     fundings_investment integer DEFAULT 0,
-    exit_strategy character varying(255) DEFAULT '',
+    exit_strategy text DEFAULT '',
     analytics_tools text[] DEFAULT '{}',
     key_metrics text[] DEFAULT '{}',
     url character varying(255) DEFAULT '',
@@ -96,9 +96,8 @@ ALTER TABLE public.apps ALTER COLUMN id ADD GENERATED ALWAYS AS IDENTITY (
     NO MAXVALUE
     CACHE 1
 );
-ALTER TABLE public.apps RENAME COLUMN "licensetype" TO license_type;
-
 -- BEGIN;
+-- ALTER TABLE public.apps RENAME COLUMN "licensetype" TO license_type;
 -- ALTER TABLE public.apps RENAME COLUMN "positioningstmt" TO positioning_stmt;
 -- ALTER TABLE public.apps RENAME COLUMN "integrationcapabilities" TO integration_capabilities;
 -- ALTER TABLE public.apps RENAME COLUMN "developmentstack" TO development_stack;
