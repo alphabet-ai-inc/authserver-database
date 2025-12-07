@@ -387,7 +387,8 @@ ALTER TABLE public.sessions OWNER TO jpassano;
 
 CREATE TABLE public.users (
     id integer NOT NULL,
-    username character varying(255) NOT NULL,
+    first_name character varying(255) NOT NULL,
+    last_name character varying(255) DEFAULT ''::character varying NOT NULL,
     password character varying(255) NOT NULL,
     code character varying(255),
     active boolean DEFAULT true NOT NULL,
@@ -398,6 +399,7 @@ CREATE TABLE public.users (
     last_try integer,
     email character varying(255),
     profile_id integer,
+    role character varying(255) DEFAULT 'user'::character varying NOT NULL,
     group_id integer,
     dbsauth_id integer,
     activation_time integer,
